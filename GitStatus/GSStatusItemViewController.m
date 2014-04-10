@@ -7,8 +7,9 @@
 //
 
 #import "GSStatusItemViewController.h"
+#import "GSAppDelegate.h"
 
-@interface GSStatusItemViewController ()
+@interface GSStatusItemViewController () <NSMenuDelegate> {}
 
 @end
 
@@ -17,9 +18,6 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Initialization code here.
-    }
     return self;
 }
 

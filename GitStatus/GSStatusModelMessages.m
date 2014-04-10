@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 LEAGUEOFBEARDS. All rights reserved.
 //
 
-#import "GSStatusModel.h"
+#import "GSStatusModelMessages.h"
 
-@implementation GSStatusModel
+@implementation GSStatusModelMessages
 
 @end

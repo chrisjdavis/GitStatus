@@ -7,7 +7,30 @@
 //
 
 #import "GSStatusMappingProvider.h"
+#import "GSStatusModelCurrentStatus.h"
+#import "GSStatusModelLastMessage.h"
+#import "GSStatusModelMessages.h"
 
 @implementation GSStatusMappingProvider
+
++ (RKMapping *)statusMappingMessages {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[GSStatusModelMessages class]];
+    return mapping;
+}
+
++ (RKMapping *)statusMappingCurrentStatus {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[GSStatusModelCurrentStatus class]];
+    
+    [mapping addAttributeMappingsFromArray:@[@"status", @"last_updated"]];
+    
+    return mapping;
+}
+
++ (RKMapping *)statusMappingLastMessage {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[GSStatusModelLastMessage class]];
+    [mapping addAttributeMappingsFromArray:@[@"status", @"body", @"last_updated"]];
+    
+    return mapping;
+}
 
 @end

@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GSStatusModel : NSObject
+@interface GSStatusModelMessages : NSObject
+
+@property (nonatomic, copy) NSString *status;
+@property (nonatomic, copy) NSString *body;
+@property (nonatomic, copy) NSString *created_on;
 
 @end

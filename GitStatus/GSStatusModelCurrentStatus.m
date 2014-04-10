@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 LEAGUEOFBEARDS. All rights reserved.
 //
 
-#import "GSStatusModelStatus.h"
+#import "GSStatusModelCurrentStatus.h"
 
-@implementation GSStatusModelStatus
+@implementation GSStatusModelCurrentStatus
 
 @end

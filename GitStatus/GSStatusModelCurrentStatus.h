@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GSStatusModelStatus : NSObject
+@interface GSStatusModelCurrentStatus : NSObject
+
+@property (nonatomic, weak) NSString *status;
+@property (nonatomic, weak) NSString *last_updated;
 
 @end

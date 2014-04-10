@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA6A0F818F652A200FABA21 /* icon_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0EE18F652A200FABA21 /* icon_16x16.png */; };
+		0DA6A0F918F652A200FABA21 /* icon_16x16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0EF18F652A200FABA21 /* icon_16x16@2x.png */; };
+		0DA6A0FA18F652A200FABA21 /* icon_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0F018F652A200FABA21 /* icon_32x32.png */; };
+		0DA6A0FB18F652A200FABA21 /* icon_32x32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0F118F652A200FABA21 /* icon_32x32@2x.png */; };
+		0DA6A0FC18F652A200FABA21 /* icon_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0F218F652A200FABA21 /* icon_128x128.png */; };
+		0DA6A0FD18F652A200FABA21 /* icon_128x128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0F318F652A200FABA21 /* icon_128x128@2x.png */; };
+		0DA6A0FE18F652A200FABA21 /* icon_256x256.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0F418F652A200FABA21 /* icon_256x256.png */; };
+		0DA6A0FF18F652A200FABA21 /* icon_256x256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0F518F652A200FABA21 /* icon_256x256@2x.png */; };
+		0DA6A10018F652A200FABA21 /* icon_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0F618F652A200FABA21 /* icon_512x512.png */; };
+		0DA6A10118F652A200FABA21 /* icon_512x512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A0F718F652A200FABA21 /* icon_512x512@2x.png */; };
+		0DC7BE0318F5FA6500DE5EDE /* getStatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE0118F5FA6500DE5EDE /* getStatusIcon.png */; };
+		0DC7BE0418F5FA6500DE5EDE /* getStatusIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE0218F5FA6500DE5EDE /* getStatusIcon@2x.png */; };
+		0DC7BE0718F5FFD300DE5EDE /* AXStatusItemPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7BE0618F5FFD300DE5EDE /* AXStatusItemPopup.m */; };
+		0DC7BE0A18F6011200DE5EDE /* getStatusIcon-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE0818F6011200DE5EDE /* getStatusIcon-alt.png */; };
+		0DC7BE0B18F6011200DE5EDE /* getStatusIcon-alt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE0918F6011200DE5EDE /* getStatusIcon-alt@2x.png */; };
+		0DC7BE0F18F607BC00DE5EDE /* GSStatusMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7BE0E18F607BC00DE5EDE /* GSStatusMappingProvider.m */; };
+		0DC7BE1318F6084200DE5EDE /* GSStatusModelMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1218F6084200DE5EDE /* GSStatusModelMessages.m */; };
+		0DC7BE1618F6094300DE5EDE /* GSStatusModelCurrentStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1518F6094300DE5EDE /* GSStatusModelCurrentStatus.m */; };
+		0DC7BE1918F6098C00DE5EDE /* GSStatusModelLastMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1818F6098C00DE5EDE /* GSStatusModelLastMessage.m */; };
+		0DC7BE2018F619A700DE5EDE /* getStatusIconGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1A18F619A700DE5EDE /* getStatusIconGreen.png */; };
+		0DC7BE2118F619A700DE5EDE /* getStatusIconGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1B18F619A700DE5EDE /* getStatusIconGreen@2x.png */; };
+		0DC7BE2218F619A700DE5EDE /* getStatusIconRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1C18F619A700DE5EDE /* getStatusIconRed.png */; };
+		0DC7BE2318F619A700DE5EDE /* getStatusIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1D18F619A700DE5EDE /* getStatusIconRed@2x.png */; };
+		0DC7BE2418F619A700DE5EDE /* getStatusIconYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1E18F619A700DE5EDE /* getStatusIconYellow.png */; };
+		0DC7BE2518F619A700DE5EDE /* getStatusIconYellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7BE1F18F619A700DE5EDE /* getStatusIconYellow@2x.png */; };
 		0DCA756618F5EC0C002F924D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCA756518F5EC0C002F924D /* Cocoa.framework */; };
 		0DCA757018F5EC0C002F924D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DCA756E18F5EC0C002F924D /* InfoPlist.strings */; };
 		0DCA757218F5EC0C002F924D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCA757118F5EC0C002F924D /* main.m */; };
@@ -18,6 +43,9 @@
 		0DCA758618F5EC0C002F924D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCA756518F5EC0C002F924D /* Cocoa.framework */; };
 		0DCA758E18F5EC0C002F924D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DCA758C18F5EC0C002F924D /* InfoPlist.strings */; };
 		0DCA759018F5EC0C002F924D /* GitStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCA758F18F5EC0C002F924D /* GitStatusTests.m */; };
+		0DCA759F18F5F05D002F924D /* GSStatusItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCA759D18F5F05D002F924D /* GSStatusItemViewController.m */; };
+		0DCA75A018F5F05D002F924D /* GSStatusItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DCA759E18F5F05D002F924D /* GSStatusItemViewController.xib */; };
+		949869FE0F314DEBA2E0E34D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D7A02DB3784951A39E26F2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +59,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DA6A0EE18F652A200FABA21 /* icon_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_16x16.png; sourceTree = "<group>"; };
+		0DA6A0EF18F652A200FABA21 /* icon_16x16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_16x16@2x.png"; sourceTree = "<group>"; };
+		0DA6A0F018F652A200FABA21 /* icon_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_32x32.png; sourceTree = "<group>"; };
+		0DA6A0F118F652A200FABA21 /* icon_32x32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_32x32@2x.png"; sourceTree = "<group>"; };
+		0DA6A0F218F652A200FABA21 /* icon_128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_128x128.png; sourceTree = "<group>"; };
+		0DA6A0F318F652A200FABA21 /* icon_128x128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_128x128@2x.png"; sourceTree = "<group>"; };
+		0DA6A0F418F652A200FABA21 /* icon_256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_256x256.png; sourceTree = "<group>"; };
+		0DA6A0F518F652A200FABA21 /* icon_256x256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_256x256@2x.png"; sourceTree = "<group>"; };
+		0DA6A0F618F652A200FABA21 /* icon_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_512x512.png; sourceTree = "<group>"; };
+		0DA6A0F718F652A200FABA21 /* icon_512x512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_512x512@2x.png"; sourceTree = "<group>"; };
+		0DA6A10218F6543B00FABA21 /* GitStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GitStatus.entitlements; sourceTree = "<group>"; };
+		0DC7BE0118F5FA6500DE5EDE /* getStatusIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getStatusIcon.png; sourceTree = "<group>"; };
+		0DC7BE0218F5FA6500DE5EDE /* getStatusIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "getStatusIcon@2x.png"; sourceTree = "<group>"; };
+		0DC7BE0518F5FFD300DE5EDE /* AXStatusItemPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXStatusItemPopup.h; sourceTree = "<group>"; };
+		0DC7BE0618F5FFD300DE5EDE /* AXStatusItemPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXStatusItemPopup.m; sourceTree = "<group>"; };
+		0DC7BE0818F6011200DE5EDE /* getStatusIcon-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "getStatusIcon-alt.png"; sourceTree = "<group>"; };
+		0DC7BE0918F6011200DE5EDE /* getStatusIcon-alt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "getStatusIcon-alt@2x.png"; sourceTree = "<group>"; };
+		0DC7BE0D18F607BC00DE5EDE /* GSStatusMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStatusMappingProvider.h; sourceTree = "<group>"; };
+		0DC7BE0E18F607BC00DE5EDE /* GSStatusMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStatusMappingProvider.m; sourceTree = "<group>"; };
+		0DC7BE1118F6084200DE5EDE /* GSStatusModelMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStatusModelMessages.h; sourceTree = "<group>"; };
+		0DC7BE1218F6084200DE5EDE /* GSStatusModelMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStatusModelMessages.m; sourceTree = "<group>"; };
+		0DC7BE1418F6094300DE5EDE /* GSStatusModelCurrentStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStatusModelCurrentStatus.h; sourceTree = "<group>"; };
+		0DC7BE1518F6094300DE5EDE /* GSStatusModelCurrentStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStatusModelCurrentStatus.m; sourceTree = "<group>"; };
+		0DC7BE1718F6098C00DE5EDE /* GSStatusModelLastMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStatusModelLastMessage.h; sourceTree = "<group>"; };
+		0DC7BE1818F6098C00DE5EDE /* GSStatusModelLastMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStatusModelLastMessage.m; sourceTree = "<group>"; };
+		0DC7BE1A18F619A700DE5EDE /* getStatusIconGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getStatusIconGreen.png; sourceTree = "<group>"; };
+		0DC7BE1B18F619A700DE5EDE /* getStatusIconGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "getStatusIconGreen@2x.png"; sourceTree = "<group>"; };
+		0DC7BE1C18F619A700DE5EDE /* getStatusIconRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getStatusIconRed.png; sourceTree = "<group>"; };
+		0DC7BE1D18F619A700DE5EDE /* getStatusIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "getStatusIconRed@2x.png"; sourceTree = "<group>"; };
+		0DC7BE1E18F619A700DE5EDE /* getStatusIconYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getStatusIconYellow.png; sourceTree = "<group>"; };
+		0DC7BE1F18F619A700DE5EDE /* getStatusIconYellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "getStatusIconYellow@2x.png"; sourceTree = "<group>"; };
 		0DCA756218F5EC0C002F924D /* GitStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCA756518F5EC0C002F924D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0DCA756818F5EC0C002F924D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -50,6 +109,11 @@
 		0DCA758B18F5EC0C002F924D /* GitStatusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitStatusTests-Info.plist"; sourceTree = "<group>"; };
 		0DCA758D18F5EC0C002F924D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0DCA758F18F5EC0C002F924D /* GitStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitStatusTests.m; sourceTree = "<group>"; };
+		0DCA759C18F5F05D002F924D /* GSStatusItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStatusItemViewController.h; sourceTree = "<group>"; };
+		0DCA759D18F5F05D002F924D /* GSStatusItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStatusItemViewController.m; sourceTree = "<group>"; };
+		0DCA759E18F5F05D002F924D /* GSStatusItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSStatusItemViewController.xib; sourceTree = "<group>"; };
+		4CF02F5F6B9F46929F28AF22 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		A7D7A02DB3784951A39E26F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DCA756618F5EC0C002F924D /* Cocoa.framework in Frameworks */,
+				949869FE0F314DEBA2E0E34D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +138,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DC7BDFE18F5F22400DE5EDE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0DA6A0EE18F652A200FABA21 /* icon_16x16.png */,
+				0DA6A0EF18F652A200FABA21 /* icon_16x16@2x.png */,
+				0DA6A0F018F652A200FABA21 /* icon_32x32.png */,
+				0DA6A0F118F652A200FABA21 /* icon_32x32@2x.png */,
+				0DA6A0F218F652A200FABA21 /* icon_128x128.png */,
+				0DA6A0F318F652A200FABA21 /* icon_128x128@2x.png */,
+				0DA6A0F418F652A200FABA21 /* icon_256x256.png */,
+				0DA6A0F518F652A200FABA21 /* icon_256x256@2x.png */,
+				0DA6A0F618F652A200FABA21 /* icon_512x512.png */,
+				0DA6A0F718F652A200FABA21 /* icon_512x512@2x.png */,
+				0DC7BE1A18F619A700DE5EDE /* getStatusIconGreen.png */,
+				0DC7BE1B18F619A700DE5EDE /* getStatusIconGreen@2x.png */,
+				0DC7BE1C18F619A700DE5EDE /* getStatusIconRed.png */,
+				0DC7BE1D18F619A700DE5EDE /* getStatusIconRed@2x.png */,
+				0DC7BE1E18F619A700DE5EDE /* getStatusIconYellow.png */,
+				0DC7BE1F18F619A700DE5EDE /* getStatusIconYellow@2x.png */,
+				0DC7BE0818F6011200DE5EDE /* getStatusIcon-alt.png */,
+				0DC7BE0918F6011200DE5EDE /* getStatusIcon-alt@2x.png */,
+				0DC7BE0118F5FA6500DE5EDE /* getStatusIcon.png */,
+				0DC7BE0218F5FA6500DE5EDE /* getStatusIcon@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		0DC7BE0C18F607A000DE5EDE /* MappingProviders */ = {
+			isa = PBXGroup;
+			children = (
+				0DC7BE0D18F607BC00DE5EDE /* GSStatusMappingProvider.h */,
+				0DC7BE0E18F607BC00DE5EDE /* GSStatusMappingProvider.m */,
+			);
+			name = MappingProviders;
+			sourceTree = "<group>";
+		};
+		0DC7BE1018F6082400DE5EDE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0DC7BE1118F6084200DE5EDE /* GSStatusModelMessages.h */,
+				0DC7BE1218F6084200DE5EDE /* GSStatusModelMessages.m */,
+				0DC7BE1418F6094300DE5EDE /* GSStatusModelCurrentStatus.h */,
+				0DC7BE1518F6094300DE5EDE /* GSStatusModelCurrentStatus.m */,
+				0DC7BE1718F6098C00DE5EDE /* GSStatusModelLastMessage.h */,
+				0DC7BE1818F6098C00DE5EDE /* GSStatusModelLastMessage.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0DCA755918F5EC0C002F924D = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +194,7 @@
 				0DCA758918F5EC0C002F924D /* GitStatusTests */,
 				0DCA756418F5EC0C002F924D /* Frameworks */,
 				0DCA756318F5EC0C002F924D /* Products */,
+				4CF02F5F6B9F46929F28AF22 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +213,7 @@
 				0DCA756518F5EC0C002F924D /* Cocoa.framework */,
 				0DCA758418F5EC0C002F924D /* XCTest.framework */,
 				0DCA756718F5EC0C002F924D /* Other Frameworks */,
+				A7D7A02DB3784951A39E26F2 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,11 +231,20 @@
 		0DCA756B18F5EC0C002F924D /* GitStatus */ = {
 			isa = PBXGroup;
 			children = (
+				0DA6A10218F6543B00FABA21 /* GitStatus.entitlements */,
+				0DC7BE1018F6082400DE5EDE /* Models */,
+				0DC7BE0C18F607A000DE5EDE /* MappingProviders */,
+				0DC7BE0518F5FFD300DE5EDE /* AXStatusItemPopup.h */,
+				0DC7BE0618F5FFD300DE5EDE /* AXStatusItemPopup.m */,
+				0DC7BDFE18F5F22400DE5EDE /* images */,
 				0DCA757718F5EC0C002F924D /* GSAppDelegate.h */,
 				0DCA757818F5EC0C002F924D /* GSAppDelegate.m */,
 				0DCA757A18F5EC0C002F924D /* MainMenu.xib */,
 				0DCA757D18F5EC0C002F924D /* Images.xcassets */,
 				0DCA756C18F5EC0C002F924D /* Supporting Files */,
+				0DCA759C18F5F05D002F924D /* GSStatusItemViewController.h */,
+				0DCA759D18F5F05D002F924D /* GSStatusItemViewController.m */,
+				0DCA759E18F5F05D002F924D /* GSStatusItemViewController.xib */,
 			);
 			path = GitStatus;
 			sourceTree = "<group>";
@@ -161,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DCA759318F5EC0C002F924D /* Build configuration list for PBXNativeTarget "GitStatus" */;
 			buildPhases = (
+				35969998E52E4311B32B954C /* Check Pods Manifest.lock */,
 				0DCA755E18F5EC0C002F924D /* Sources */,
 				0DCA755F18F5EC0C002F924D /* Frameworks */,
 				0DCA756018F5EC0C002F924D /* Resources */,
+				D330D87F57AB4E918616138E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +329,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = LEAGUEOFBEARDS;
 				TargetAttributes = {
+					0DCA756118F5EC0C002F924D = {
+						DevelopmentTeam = 4ZP9P6VDD5;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					0DCA758218F5EC0C002F924D = {
 						TestTargetID = 0DCA756118F5EC0C002F924D;
 					};
@@ -231,10 +366,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC7BE2518F619A700DE5EDE /* getStatusIconYellow@2x.png in Resources */,
 				0DCA757018F5EC0C002F924D /* InfoPlist.strings in Resources */,
+				0DC7BE0418F5FA6500DE5EDE /* getStatusIcon@2x.png in Resources */,
+				0DA6A0FA18F652A200FABA21 /* icon_32x32.png in Resources */,
+				0DC7BE0B18F6011200DE5EDE /* getStatusIcon-alt@2x.png in Resources */,
+				0DC7BE2318F619A700DE5EDE /* getStatusIconRed@2x.png in Resources */,
+				0DA6A0FD18F652A200FABA21 /* icon_128x128@2x.png in Resources */,
+				0DA6A0FE18F652A200FABA21 /* icon_256x256.png in Resources */,
+				0DC7BE2218F619A700DE5EDE /* getStatusIconRed.png in Resources */,
+				0DA6A0FB18F652A200FABA21 /* icon_32x32@2x.png in Resources */,
 				0DCA757E18F5EC0C002F924D /* Images.xcassets in Resources */,
+				0DA6A10018F652A200FABA21 /* icon_512x512.png in Resources */,
+				0DC7BE0A18F6011200DE5EDE /* getStatusIcon-alt.png in Resources */,
 				0DCA757618F5EC0C002F924D /* Credits.rtf in Resources */,
 				0DCA757C18F5EC0C002F924D /* MainMenu.xib in Resources */,
+				0DC7BE2018F619A700DE5EDE /* getStatusIconGreen.png in Resources */,
+				0DA6A0FF18F652A200FABA21 /* icon_256x256@2x.png in Resources */,
+				0DCA75A018F5F05D002F924D /* GSStatusItemViewController.xib in Resources */,
+				0DC7BE0318F5FA6500DE5EDE /* getStatusIcon.png in Resources */,
+				0DA6A0F918F652A200FABA21 /* icon_16x16@2x.png in Resources */,
+				0DA6A10118F652A200FABA21 /* icon_512x512@2x.png in Resources */,
+				0DC7BE2118F619A700DE5EDE /* getStatusIconGreen@2x.png in Resources */,
+				0DA6A0FC18F652A200FABA21 /* icon_128x128.png in Resources */,
+				0DC7BE2418F619A700DE5EDE /* getStatusIconYellow.png in Resources */,
+				0DA6A0F818F652A200FABA21 /* icon_16x16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,13 +404,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35969998E52E4311B32B954C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D330D87F57AB4E918616138E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DCA755E18F5EC0C002F924D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC7BE0F18F607BC00DE5EDE /* GSStatusMappingProvider.m in Sources */,
+				0DCA759F18F5F05D002F924D /* GSStatusItemViewController.m in Sources */,
 				0DCA757918F5EC0C002F924D /* GSAppDelegate.m in Sources */,
+				0DC7BE0718F5FFD300DE5EDE /* AXStatusItemPopup.m in Sources */,
+				0DC7BE1618F6094300DE5EDE /* GSStatusModelCurrentStatus.m in Sources */,
+				0DC7BE1918F6098C00DE5EDE /* GSStatusModelLastMessage.m in Sources */,
 				0DCA757218F5EC0C002F924D /* main.m in Sources */,
+				0DC7BE1318F6084200DE5EDE /* GSStatusModelMessages.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,8 +579,11 @@
 		};
 		0DCA759418F5EC0C002F924D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CF02F5F6B9F46929F28AF22 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GitStatus/GitStatus.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitStatus/GitStatus-Prefix.pch";
@@ -397,8 +595,11 @@
 		};
 		0DCA759518F5EC0C002F924D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CF02F5F6B9F46929F28AF22 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GitStatus/GitStatus.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitStatus/GitStatus-Prefix.pch";
@@ -467,6 +668,7 @@
 				0DCA759518F5EC0C002F924D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DCA759618F5EC0C002F924D /* Build configuration list for PBXNativeTarget "GitStatusTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +677,7 @@
 				0DCA759818F5EC0C002F924D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

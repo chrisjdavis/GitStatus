@@ -10,4 +10,8 @@
 
 @interface GSStatusModelLastMessage : NSObject
 
+@property (nonatomic, copy) NSString *status;
+@property (nonatomic, copy) NSString *body;
+@property (nonatomic, copy) NSString *created_on;
+
 @end

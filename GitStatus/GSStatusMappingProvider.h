@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
 @interface GSStatusMappingProvider : NSObject
+
++ (RKMapping *)statusMappingLastMessage;
++ (RKMapping *)statusMappingCurrentStatus;
++ (RKMapping *)statusMappingMessages;
 
 @end

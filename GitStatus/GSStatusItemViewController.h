@@ -7,7 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AXStatusItemPopup.h"
 
 @interface GSStatusItemViewController : NSViewController
+
+@property(weak, nonatomic) AXStatusItemPopup *statusItemPopup;
 
 @end
