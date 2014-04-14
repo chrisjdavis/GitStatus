@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "GSStatusItemViewController.h"
 
-@interface GSAppDelegate : NSObject <NSApplicationDelegate>
+@interface GSAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 

@@ -11,6 +11,8 @@
 
 @interface GSStatusItemViewController : NSViewController
 
-@property(weak, nonatomic) AXStatusItemPopup *statusItemPopup;
+@property (weak, nonatomic) AXStatusItemPopup *statusItemPopup;
+@property (weak) IBOutlet NSPopUpButton *otherBrowsers;
+@property (weak) IBOutlet NSImageView *saving;
 
 @end

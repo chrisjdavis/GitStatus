@@ -27,9 +27,11 @@ NSArray *_items;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     GSStatusItemViewController *contentViewController = [[GSStatusItemViewController alloc] initWithNibName:@"GSStatusItemViewController" bundle:nil];
+
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     
     NSImage *image = [NSImage imageNamed:@"getStatusIcon"];
-    NSImage *alternateImage = [NSImage imageNamed:@"getStatusIcon-alt"];
+    NSImage *alternateImage = [NSImage imageNamed:@"getStatusIcon"];
     
     _statusItemPopup = [[AXStatusItemPopup alloc] initWithViewController:contentViewController image:image alternateImage:alternateImage];
     contentViewController.statusItemPopup = _statusItemPopup;
@@ -37,13 +39,11 @@ NSArray *_items;
 
 - (void) awakeFromNib {
     [super awakeFromNib];
-
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    [prefs removeObjectForKey:@"gitStatus.status"];
+    
     [self checkStatus];
     
     NSDate *d = [NSDate dateWithTimeIntervalSinceNow:0];
-    NSTimer *t = [[NSTimer alloc] initWithFireDate:d interval:60 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
+    NSTimer *t = [[NSTimer alloc] initWithFireDate:d interval:120 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
     
     NSRunLoop *runner = [NSRunLoop currentRunLoop];
     [runner addTimer:t forMode: NSDefaultRunLoopMode];
@@ -128,6 +128,21 @@ NSArray *_items;
 
 - (void)showNotification:notif {
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notif];
+}
+
+- (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *browser = [prefs stringForKey:@"gitStatus.browser"];
+    
+    NSWorkspace * ws = [NSWorkspace sharedWorkspace];
+    NSURL *nUrl = [NSURL URLWithString:@"https://status.github.com"];
+    NSArray *urlArray = [NSArray arrayWithObjects:nUrl,nil];
+    
+    if( browser ) {
+        [ws openURLs: urlArray withAppBundleIdentifier:browser options: NSWorkspaceLaunchDefault additionalEventParamDescriptor: NULL launchIdentifiers: NULL];
+    } else {
+        [ws openURLs: urlArray withAppBundleIdentifier:@"com.apple.safari" options: NSWorkspaceLaunchDefault additionalEventParamDescriptor: NULL launchIdentifiers: NULL];
+    }
 }
 
 @end
