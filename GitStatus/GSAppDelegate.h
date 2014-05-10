@@ -12,5 +12,9 @@
 @interface GSAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSButton *startAtLogin;
+@property (assign) IBOutlet NSButton *doNotify;
+
+- (void)showPrefs;
 
 @end

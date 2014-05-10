@@ -12,6 +12,7 @@
 #import "GSStatusModelCurrentStatus.h"
 #import "GSStatusModelLastMessage.h"
 #import "GSStatusMappingProvider.h"
+#import "GSStatusItemViewController.h"
 
 @interface GSAppDelegate () {
     AXStatusItemPopup *_statusItemPopup;
@@ -23,11 +24,21 @@
 
 @implementation GSAppDelegate
 
+@synthesize window;
+@synthesize doNotify;
+@synthesize startAtLogin;
+
+NSString *loginItem = nil;
+NSString *notify = nil;
+
 NSArray *_items;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     GSStatusItemViewController *contentViewController = [[GSStatusItemViewController alloc] initWithNibName:@"GSStatusItemViewController" bundle:nil];
-
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs removeObjectForKey:@"gitStatus.status"];
+    
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     
     NSImage *image = [NSImage imageNamed:@"getStatusIcon"];
@@ -35,6 +46,21 @@ NSArray *_items;
     
     _statusItemPopup = [[AXStatusItemPopup alloc] initWithViewController:contentViewController image:image alternateImage:alternateImage];
     contentViewController.statusItemPopup = _statusItemPopup;
+    
+    loginItem = [prefs stringForKey:@"gitStatus.loginItem"];
+    notify = [prefs stringForKey:@"gitStatus.doNotifications"];
+    
+    if( [loginItem isEqualToString:@"YES"] ) {
+        [startAtLogin setState:NSOnState];
+    } else {
+        [startAtLogin setState:NSOffState];
+    }
+    
+    if( [notify isEqualToString:@"YES"] ) {
+        [doNotify setState:NSOnState];
+    } else {
+        [doNotify setState:NSOffState];
+    }
 }
 
 - (void) awakeFromNib {
@@ -94,7 +120,9 @@ NSArray *_items;
         [self updateIcon:3];
     }
     
-    if( notify == 1 ) {
+    NSString *doNotifs = [prefs stringForKey:@"gitStatus.doNotifications"];
+    
+    if( notify == 1 && [doNotifs isEqualToString:@"YES"] ) {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
         
         notification.title = @"Github Status";
@@ -102,6 +130,10 @@ NSArray *_items;
         
         [self showNotification:notification];
     }
+}
+
+-(void)showPrefs {
+    [window makeKeyAndOrderFront:self];
 }
 
 -(void)updateIcon:(int)code {
@@ -131,18 +163,69 @@ NSArray *_items;
 }
 
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://status.github.com"]];
+}
+
+-(void)addAsLoginItem {
+    NSLog(@"Adding item");
+	NSString *appPath = [[NSBundle mainBundle] bundlePath];
+    
+	CFURLRef url = (CFURLRef)CFBridgingRetain([NSURL fileURLWithPath:appPath]);
+    
+	LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+	if (loginItems) {
+		LSSharedFileListItemRef item = LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemLast, NULL, NULL, url, NULL, NULL);
+		if (item){
+			CFRelease(item);
+        }
+	}
+    
+	CFRelease(loginItems);
+}
+
+-(void) deleteFromLoginItems {
+    NSLog(@"Removing item");
+	NSString *appPath = [[NSBundle mainBundle] bundlePath];
+    CFURLRef url = (CFURLRef)CFBridgingRetain([NSURL fileURLWithPath:appPath]);
+    
+	LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+    
+	if (loginItems) {
+		UInt32 seedValue;
+		NSArray  *loginItemsArray = (NSArray *)CFBridgingRelease(LSSharedFileListCopySnapshot(loginItems, &seedValue));
+		for( int i = 0; i < [loginItemsArray count]; i++ ) {
+			LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)CFBridgingRetain([loginItemsArray objectAtIndex:i]);
+			if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &url, NULL) == noErr) {
+				NSString * urlPath = [(NSURL*)CFBridgingRelease(url) path];
+                if ([urlPath isEqualToString:appPath]) {
+					LSSharedFileListItemRemove(loginItems,itemRef);
+				}
+			}
+		}
+	}
+}
+
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSString *browser = [prefs stringForKey:@"gitStatus.browser"];
     
-    NSWorkspace * ws = [NSWorkspace sharedWorkspace];
-    NSURL *nUrl = [NSURL URLWithString:@"https://status.github.com"];
-    NSArray *urlArray = [NSArray arrayWithObjects:nUrl,nil];
+    NSInteger startState = [startAtLogin state];
+    NSInteger notifsState = [doNotify state];
     
-    if( browser ) {
-        [ws openURLs: urlArray withAppBundleIdentifier:browser options: NSWorkspaceLaunchDefault additionalEventParamDescriptor: NULL launchIdentifiers: NULL];
+    if( startState == 1 ) {
+        [prefs setObject:@"YES" forKey:@"gitStatus.loginItem"];
+        [self addAsLoginItem];
     } else {
-        [ws openURLs: urlArray withAppBundleIdentifier:@"com.apple.safari" options: NSWorkspaceLaunchDefault additionalEventParamDescriptor: NULL launchIdentifiers: NULL];
+        [prefs setObject:@"NO" forKey:@"gitStatus.loginItem"];
+        [self deleteFromLoginItems];
     }
+    
+    if( notifsState == 1 ) {
+        [prefs setObject:@"YES" forKey:@"gitStatus.doNotifications"];
+    } else {
+        [prefs setObject:@"NO" forKey:@"gitStatus.doNotifications"];
+    }
+    
+    return NSTerminateNow;
 }
 
 @end
